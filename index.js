@@ -5,8 +5,10 @@ const port =  process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 //import utils here if you wanna change protypes
 const WelcomeController = require('./controllers/welcome');
+const logger = require('./middlewares/logger');
 //register middlewares here
 app.use(bodyParser.json());
+app.use(logger.log);
 //routes can be registered here
 app.get('/', WelcomeController.index);
 
