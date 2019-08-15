@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(logger.log);
 //routes can be registered here
 app.get('/', WelcomeController.index);
+app.get('/random',WordsController.random);
 app.get('/word',WordsController.get);
 app.post('/word',WordsController.post);
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

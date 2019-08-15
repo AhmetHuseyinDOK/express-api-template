@@ -9,3 +9,10 @@ exports.post = (req,res) => {
     WordService.add(word,meaning);
     res.status(200).send();
 }
+
+exports.random = (req,res) => {
+    res.send({
+        word:"random",
+        meaning:"rastgele"
+    });
+}
