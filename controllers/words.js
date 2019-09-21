@@ -1,7 +1,7 @@
 const WordService =  require('../services/word');
 
 exports.get = (req,res) => {
-    res.send(WordService.all());
+    res.send([...WordService.all()].reverse());
 }
 
 exports.post = (req,res) => {

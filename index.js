@@ -15,4 +15,5 @@ app.get('/', WelcomeController.index);
 app.get('/random',WordsController.random);
 app.get('/word',WordsController.get);
 app.post('/word',WordsController.post);
+app.post('/error',(req,res)=>{res.status(500).send(JSON.stringify({error:"err"}))})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
